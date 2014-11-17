@@ -1,0 +1,50 @@
+body
+{
+	font-size:12px;
+	font-family: Verdana;
+}
+
+h1
+{
+	font-weight: normal;
+}
+
+.form-row
+{
+	padding: 5px;
+	margin: 2px;
+}
+
+.form-row label
+{
+	display: inline-block;
+	width: 70px;
+}
+
+#templates
+{
+	display: none;
+}
+
+.tooltip-widget-block
+{
+	width: 200px;
+	display: none;
+	border: 1px solid #e0e0e0;
+	padding: 1px;
+	position: absolute;
+	background: #f0f0f0;
+	border-radius:5px;
+}
+
+.tooltip-widget-block .tooltip-widget-content
+{
+	padding: 5px;
+}
+
+.tooltip-widget-block .tooltip-widget-header
+{
+	background: #e0e0e0;
+	border-radius:5px;
+	padding: 5px;
+}
