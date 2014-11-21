@@ -1,4 +1,4 @@
-#Tooltip Widget v0.0~dev
+#Tooltip Widget v0.0.1~dev
 
 Tooltip Widget is a widget based on jQuery-UI. It helps to create simple tips for your elements on a web-page.
 
