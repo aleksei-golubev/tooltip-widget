@@ -38,12 +38,12 @@
 			var self = this, element = self.element, tip = self.options.tip;
 
 			$(element).mouseover(function(e) {
-				self.setTipContent().setTipView().setTipPosition(e);
+				self._setTipContent()._setTipView()._setTipPosition(e);
 				$(tip).css("display", "block");
 			});
 			
 			$(element).mousemove(function(e) {
-				self.setTipPosition(e);
+				self._setTipPosition(e);
 			});
 			
 			$(element).mouseout(function() {
@@ -51,7 +51,7 @@
 			});
 		},
 		
-		getTipTop: function(e) {
+		_getTipTop: function(e) {
 			var tip = this.options.tip;
 			
 			tipTop =	$(document).height() < (e.pageY + this.options.cursorOffset[1] + $(tip).height()) ?
@@ -61,7 +61,7 @@
 			return tipTop;
 		},
 		
-		getTipLeft: function(e) {
+		_getTipLeft: function(e) {
 			var tip = this.options.tip;
 			
 			tipLeft =	$(document).width() < (e.pageX + this.options.cursorOffset[1] + $(tip).width()) ?
@@ -71,7 +71,7 @@
 			return tipLeft;
 		},
 		
-		setTipContent: function() {
+		_setTipContent: function() {
 			var element = this.element, tip = this.options.tip;
 			
 			$(tip).find(".tooltip-widget-header").text(
@@ -89,7 +89,7 @@
 			return this;
 		},
 		
-		setTipView: function() {
+		_setTipView: function() {
 			var tip = this.options.tip;
 			
 			$(tip).find(".tooltip-widget-header").css(
@@ -103,11 +103,11 @@
 			return this;
 		},
 		
-		setTipPosition: function(e) {
+		_setTipPosition: function(e) {
 			var tip = this.options.tip;
 			
-			$(tip).css('top', this.getTipTop(e));
-			$(tip).css('left', this.getTipLeft(e));
+			$(tip).css('top', this._getTipTop(e));
+			$(tip).css('left', this._getTipLeft(e));
 			
 			return this;
 		}
