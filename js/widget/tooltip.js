@@ -2,7 +2,7 @@
 	Tooltip Widget v0.0.1~dev
 */
 (function($) {
-	$.widget("bs.tooltip", {
+	$.widget("ro.tooltip", {
 		options: {
 			template:	"<div class=\"tooltip-widget-block\">"+
 						"<div class=\"tooltip-widget-header\"></div>"+
